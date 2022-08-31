@@ -1,8 +1,8 @@
-这是pnpm monorepo搭建的多包管理项目，打算做这么几件工程。
+# 这是pnpm monorepo搭建的多包管理项目，打算做这么几件工程。
 
 packages/wiz-project-cli 用来下载react项目或者vue项目模板[github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-project-cli)  
 
-packages/wiz-react-template  标准统一工程，自带框架体系，数据流管理，路由管理，权限管理等。 [github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-react-template)
+packages/wiz-react-template  使用umi4框架, 标准统一工程，自带框架体系，数据流管理，路由管理，权限管理等。 [github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-react-template)
 
 packages/wiz-ui-library  vue+vite组件库 [github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-ui-libirary)
 
@@ -38,3 +38,7 @@ pnpm-workspace.yaml
   pnpm i wiz-ui-library -r --filter wiz-react-template
 
 ```
+
+# 代码提交规范
+
+ `npm run commit`
