@@ -6,13 +6,12 @@ Monorepo是管理项目代码的方式之一，指在一个大的项目仓库（
 
 ```
 packages
-
 	pkg1
 		package.json
 	pkg2
 		package.json
-
 package.json
+pnpm-workspace.yaml
 ```
 
 # Monorepo 的好处在哪里嘞？
@@ -23,13 +22,11 @@ package.json
 # pnpm安装依赖
 
 ```
- 安装所有依赖:pnpm m i 
+ 安装所有依赖: pnpm m i 
  安装全局依赖: pnpm install typescript -D -W
  安装局部依赖: pnpm install react react-dom -r --filter wiz-react-template
  link机制:
-
     在 monorepo 中，我们往往需要 package 间的引用，比如本例中的wiz-ui-library就会被wiz-react-template依赖。
-
   pnpm i wiz-ui-library -r --filter wiz-react-template
 
 ```
