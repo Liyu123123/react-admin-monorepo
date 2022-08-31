@@ -1,2 +1,3 @@
-# react-admin-monorepo
-react项目
+# wiz-react-template
+
+react+umi.js模板
