@@ -1,4 +1,9 @@
-这是pnpm monorepo搭建的多包管理项目
+这是pnpm monorepo搭建的多包管理项目，打算做这么几件工程。
+
+脚手架cli 用来下载react项目或者vue项目模板[github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-project-cli)
+react项目模板 标准统一工程，自带框架体系，数据流管理，路由管理，权限管理等。 [github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-react-template)
+vue组件库 标准统一工程 用来初始化一些项目，自带框架体系，数据流管理，路由管理，权限管理等。 [github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-ui-libirary)
+vue项目模板 [github地址](https://github.com/Liyu123123/wiz-fe-monorepo/tree/main/packages/wiz-ui-libirary)
 
 # 什么是 Monorepo ?
 
