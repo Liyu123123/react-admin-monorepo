@@ -12,7 +12,8 @@
     "start-template": "cd packages/wiz-react-template && pnpm dev ",
     "preinstall": "node ./scripts/preinstall.js",
     "release": "pnpm build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "commit": "git add . && git cz"
   },
   "keywords": [],
   "author": "liyu",
