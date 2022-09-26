@@ -5,7 +5,12 @@
   <div>
     <a-layout style="min-height: 100vh">
       <a-layout-sider v-model="collapsed" collapsible>
-        <a-menu v-model="selectedKeys" theme="dark" mode="inline">
+        <a-menu
+          @click="handleClick"
+          v-model="selectedKeys"
+          theme="dark"
+          mode="inline"
+        >
           <a-menu-item key="1">
             <pie-chart-outlined />
             <span>Option 1</span>
@@ -39,12 +44,16 @@
             <file-outlined />
             <span>File</span>
           </a-menu-item>
+          <a-menu-item key="crud">
+            <file-outlined />
+            <span>crud</span>
+          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
         <a-layout-header style="background: #fff; padding: 0" />
         <a-layout-content style="margin: 0 16px">
-          <a-breadcrumb style="margin: 16px 0">
+          <!-- <a-breadcrumb style="margin: 16px 0">
             <a-breadcrumb-item>User</a-breadcrumb-item>
             <a-breadcrumb-item>Bill</a-breadcrumb-item>
           </a-breadcrumb>
@@ -52,7 +61,8 @@
             :style="{ padding: '24px', background: '#fff', minHeight: '360px' }"
           >
             Bill is a cat.
-          </div>
+          </div> -->
+          <router-view />
         </a-layout-content>
       </a-layout>
     </a-layout>
@@ -68,9 +78,15 @@ import {
   FileOutlined,
 } from "@ant-design/icons-vue";
 import { defineComponent, ref } from "vue";
-
+import { useRoute, useRouter } from "vue-router";
 const collapsed = ref<boolean>(false);
 const selectedKeys = ref<string[]>(["1"]);
+const router = useRouter();
+
+const handleClick = (val) => {
+  console.log(val);
+  router.push("/" + val.key);
+};
 </script>
 
 <style>
